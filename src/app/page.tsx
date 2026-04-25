@@ -44,9 +44,15 @@ export default function Home() {
         <section className="rounded-2xl border border-emerald-200 bg-primary-soft p-6">
           <h3 className="text-lg font-semibold">Langkah Berikutnya</h3>
           <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm text-emerald-900">
-            <li>Set variabel environment Supabase di Vercel Project Settings.</li>
-            <li>Jalankan migration SQL pada Supabase.</li>
-            <li>Hubungkan repository GitHub ke Vercel dan aktifkan auto-deploy.</li>
+            <li>
+              Login dari halaman{" "}
+              <Link href="/login" className="underline">
+                /login
+              </Link>{" "}
+              menggunakan akun Supabase Auth.
+            </li>
+            <li>Pastikan user punya role di tabel profiles (`admin` / `produksi` / `owner`).</li>
+            <li>Set environment variable yang sama di Vercel Project Settings.</li>
           </ol>
         </section>
       </main>

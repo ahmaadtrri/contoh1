@@ -19,6 +19,9 @@ Web app inventori bahan baku dan produk jadi berbasis `Next.js + Supabase`, siap
 - Helper FIFO, soft warning stok kurang, generator SKU.
 - Migration SQL Supabase + RLS role (`admin`, `produksi`, `owner`).
 - CI GitHub Actions: lint, typecheck, test, build.
+- Frontend terintegrasi Supabase Auth:
+- `/login` untuk sign-in
+- `/gudang`, `/produksi`, `/owner` untuk operasi berbasis bearer token session
 
 ## Prasyarat
 
@@ -44,13 +47,16 @@ cp .env.example .env.local
 ```env
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
 SUPABASE_SERVICE_ROLE_KEY=
 APP_URL=http://localhost:3000
 ```
 
 4. Jalankan migration SQL `supabase/migrations/0001_inventory_core.sql` di SQL Editor Supabase.
 
-5. Jalankan app:
+5. Buat user di Supabase Auth lalu isi role user di tabel `profiles` (`admin` / `produksi` / `owner`).
+
+6. Jalankan app:
 ```bash
 npm run dev
 ```
@@ -73,6 +79,7 @@ git push -u origin main
 3. Set Environment Variables (Production + Preview):
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
 - `SUPABASE_SERVICE_ROLE_KEY`
 - `APP_URL` (isi URL domain Vercel kamu setelah domain aktif).
 4. Klik Deploy.
@@ -92,4 +99,3 @@ npm run typecheck
 npm run test
 npm run build
 ```
-
