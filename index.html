@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Triwahyudi — Desainer Kreatif</title>
+    <meta name="description" content="Portfolio Ahmad Triwahyudi — Desainer kreatif spesialis UI/UX, branding, dan graphic design. Lihat karya-karya terbaik saya.">
+    <meta name="keywords" content="Ahmad Triwahyudi, desainer, UI/UX, branding, graphic design, portfolio">
+    <meta name="author" content="Ahmad Triwahyudi">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-line"></div>
+            <div class="loader-text">
+                <span>A</span><span>H</span><span>M</span><span>A</span><span>D</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo">
+            <span class="logo-text">AT</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="#home" class="nav-link active" data-section="home">Beranda</a>
+            <a href="#about" class="nav-link" data-section="about">Tentang</a>
+            <a href="#services" class="nav-link" data-section="services">Layanan</a>
+            <a href="#portfolio" class="nav-link" data-section="portfolio">Portofolio</a>
+            <a href="#contact" class="nav-link" data-section="contact">Kontak</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-effects">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Tersedia untuk proyek baru</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">
+                    <span class="title-word" data-delay="0">Halo,</span>
+                    <span class="title-word" data-delay="1">Saya</span>
+                </span>
+                <span class="title-line title-name">
+                    <span class="title-word title-highlight" data-delay="2">Ahmad</span>
+                </span>
+                <span class="title-line title-name">
+                    <span class="title-word title-highlight" data-delay="3">Triwahyudi</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="typed-text" id="typed-text"></span>
+                <span class="typed-cursor">|</span>
+            </p>
+            <div class="hero-cta">
+                <a href="#portfolio" class="btn btn-primary" id="btn-portfolio">
+                    <span>Lihat Karya</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-outline" id="btn-contact">
+                    <span>Hubungi Saya</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Proyek Selesai</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Klien Puas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Tahun Pengalaman</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-frame">
+                <div class="image-glow"></div>
+                <img src="assets/images/profile.png" alt="Ahmad Triwahyudi" loading="eager">
+                <div class="image-border"></div>
+            </div>
+            <div class="floating-card card-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span>UI/UX Design</span>
+            </div>
+            <div class="floating-card card-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/>
+                </svg>
+                <span>Branding</span>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tentang Saya</span>
+                <h2 class="section-title">Desainer yang <span class="text-gradient">Passionate</span></h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-img-wrapper">
+                        <img src="assets/images/profile.png" alt="Ahmad Triwahyudi" loading="lazy">
+                    </div>
+                    <div class="experience-badge">
+                        <span class="exp-number">5+</span>
+                        <span class="exp-text">Tahun<br>Pengalaman</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="about-description">
+                        Saya Ahmad Triwahyudi, seorang desainer kreatif yang berbasis di Indonesia. 
+                        Dengan pengalaman lebih dari 5 tahun, saya mengkhususkan diri dalam menciptakan 
+                        pengalaman digital yang memukau dan solusi desain yang berdampak.
+                    </p>
+                    <p class="about-description">
+                        Saya percaya bahwa desain yang baik bukan hanya tentang estetika, 
+                        tetapi juga tentang memecahkan masalah dan menciptakan koneksi emosional 
+                        antara produk dan penggunanya.
+                    </p>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>UI/UX Design</h4>
+                                <p>Desain antarmuka intuitif</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Branding</h4>
+                                <p>Identitas visual brand</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                                    <path d="M2 2l7.586 7.586"/>
+                                    <circle cx="11" cy="11" r="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Graphic Design</h4>
+                                <p>Desain grafis kreatif</p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Web Design</h4>
+                                <p>Desain website modern</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tools-section">
+                        <h4 class="tools-title">Tools yang saya gunakan:</h4>
+                        <div class="tools-list">
+                            <span class="tool-badge">Figma</span>
+                            <span class="tool-badge">Adobe Photoshop</span>
+                            <span class="tool-badge">Adobe Illustrator</span>
+                            <span class="tool-badge">Adobe XD</span>
+                            <span class="tool-badge">Canva</span>
+                            <span class="tool-badge">Blender</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Layanan</span>
+                <h2 class="section-title">Apa yang Saya <span class="text-gradient">Tawarkan</span></h2>
+                <p class="section-subtitle">Solusi desain lengkap untuk kebutuhan bisnis Anda</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-tilt>
+                    <div class="service-number">01</div>
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Merancang antarmuka pengguna yang intuitif dan pengalaman pengguna yang menyenangkan untuk aplikasi mobile dan web.</p>
+                    <ul class="service-features">
+                        <li>User Research & Analysis</li>
+                        <li>Wireframing & Prototyping</li>
+                        <li>Visual Design & Interaction</li>
+                    </ul>
+                </div>
+                <div class="service-card featured" data-tilt>
+                    <div class="service-badge">Populer</div>
+                    <div class="service-number">02</div>
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h3>Brand Identity</h3>
+                    <p>Membangun identitas visual brand yang kuat dan konsisten yang membedakan bisnis Anda dari kompetitor.</p>
+                    <ul class="service-features">
+                        <li>Logo & Visual Identity</li>
+                        <li>Brand Guidelines</li>
+                        <li>Stationery & Collateral</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-tilt>
+                    <div class="service-number">03</div>
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                            <path d="M2 2l7.586 7.586"/>
+                            <circle cx="11" cy="11" r="2"/>
+                        </svg>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Membuat desain grafis yang menarik untuk berbagai kebutuhan pemasaran dan komunikasi visual Anda.</p>
+                    <ul class="service-features">
+                        <li>Social Media Design</li>
+                        <li>Print & Digital Marketing</li>
+                        <li>Packaging Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portofolio</span>
+                <h2 class="section-title">Karya <span class="text-gradient">Terbaru</span></h2>
+                <p class="section-subtitle">Koleksi proyek-proyek terbaik yang telah saya kerjakan</p>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="uiux">UI/UX</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="graphic">Graphic</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="uiux">
+                    <div class="portfolio-image">
+                        <img src="assets/images/project1.png" alt="Mobile App Design" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">UI/UX Design</span>
+                                <h3>Mobile App Design</h3>
+                                <p>Desain aplikasi mobile dengan konsep glassmorphism modern</p>
+                                <button class="portfolio-link" aria-label="Lihat detail proyek">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-image">
+                        <img src="assets/images/project2.png" alt="Brand Identity" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Branding</span>
+                                <h3>Brand Identity Design</h3>
+                                <p>Sistem identitas visual lengkap untuk startup teknologi</p>
+                                <button class="portfolio-link" aria-label="Lihat detail proyek">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="uiux">
+                    <div class="portfolio-image">
+                        <img src="assets/images/project3.png" alt="Dashboard Design" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">UI/UX Design</span>
+                                <h3>E-Commerce Dashboard</h3>
+                                <p>Dashboard analitik untuk platform e-commerce terkemuka</p>
+                                <button class="portfolio-link" aria-label="Lihat detail proyek">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="graphic">
+                    <div class="portfolio-image">
+                        <img src="assets/images/project4.png" alt="Poster Design" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Graphic Design</span>
+                                <h3>Creative Poster Series</h3>
+                                <p>Seri poster kreatif untuk festival seni dan budaya</p>
+                                <button class="portfolio-link" aria-label="Lihat detail proyek">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="graphic">
+                    <div class="portfolio-image">
+                        <img src="assets/images/project5.png" alt="Social Media Design" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Graphic Design</span>
+                                <h3>Social Media Package</h3>
+                                <p>Paket desain media sosial untuk brand lifestyle premium</p>
+                                <button class="portfolio-link" aria-label="Lihat detail proyek">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-image">
+                        <img src="assets/images/project1.png" alt="Rebranding Project" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Branding</span>
+                                <h3>Rebranding Project</h3>
+                                <p>Proyek rebranding untuk perusahaan finansial terkemuka</p>
+                                <button class="portfolio-link" aria-label="Lihat detail proyek">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimoni</span>
+                <h2 class="section-title">Apa Kata <span class="text-gradient">Klien</span></h2>
+            </div>
+            <div class="testimonials-slider" id="testimonials-slider">
+                <div class="testimonial-track" id="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"Ahmad sangat profesional dan kreatif. Hasil desainnya selalu melebihi ekspektasi kami. Sangat merekomendasikan!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RA</div>
+                            <div>
+                                <h4>Rizki Anwar</h4>
+                                <span>CEO, TechStartup</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"Desain brand identity yang dibuat Ahmad benar-benar menggambarkan visi perusahaan kami. Proses kolaborasinya sangat menyenangkan."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SP</div>
+                            <div>
+                                <h4>Sari Puspita</h4>
+                                <span>Marketing Director, ModernCo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p>"Kualitas desain dan perhatian terhadap detail yang luar biasa. Ahmad selalu memberikan hasil terbaik tepat waktu."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">BD</div>
+                            <div>
+                                <h4>Budi Dharma</h4>
+                                <span>Founder, CreativeHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="testimonial-btn prev" id="testimonial-prev" aria-label="Previous testimonial">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <div class="testimonial-dots" id="testimonial-dots"></div>
+                    <button class="testimonial-btn next" id="testimonial-next" aria-label="Next testimonial">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Kontak</span>
+                    <h2 class="section-title">Mari <span class="text-gradient">Berkolaborasi</span></h2>
+                    <p class="contact-description">
+                        Punya proyek menarik? Saya selalu terbuka untuk berdiskusi tentang 
+                        proyek baru, ide kreatif, atau kesempatan untuk menjadi bagian dari visi Anda.
+                    </p>
+                    <div class="contact-details">
+                        <a href="mailto:ahmad@triwahyudi.com" class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">ahmad@triwahyudi.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+6281234567890" class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Telepon</span>
+                                <span class="contact-value">+62 812 3456 7890</span>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Lokasi</span>
+                                <span class="contact-value">Indonesia</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Dribbble">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Behance">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="form-name" name="name" placeholder=" " required>
+                            <label for="form-name">Nama Lengkap</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="form-email" name="email" placeholder=" " required>
+                            <label for="form-email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="form-subject" name="subject" placeholder=" " required>
+                            <label for="form-subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="form-message" name="message" rows="5" placeholder=" " required></textarea>
+                            <label for="form-message">Pesan</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+                            <span>Kirim Pesan</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">AT</span>
+                    <p>Menciptakan desain yang menginspirasi dan berdampak.</p>
+                </div>
+                <div class="footer-nav">
+                    <a href="#home">Beranda</a>
+                    <a href="#about">Tentang</a>
+                    <a href="#services">Layanan</a>
+                    <a href="#portfolio">Portofolio</a>
+                    <a href="#contact">Kontak</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ahmad Triwahyudi. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
